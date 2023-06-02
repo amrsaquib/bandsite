@@ -1,0 +1,13 @@
+.gallery {
+    background-color: #FAFAFA;
+    padding: 0 1rem;
+
+    &__images {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__image {
+        margin-bottom: 1rem;
+    }
+}

@@ -1,0 +1,13 @@
+.hero {
+    display: flex;
+    align-items: center;
+    background:linear-gradient(0deg, rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url('../../assets/images/hero-bio.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 30vh;
+    padding: 0 1rem;
+
+    &__header {
+        color: #FFFFFF;
+    }
+}

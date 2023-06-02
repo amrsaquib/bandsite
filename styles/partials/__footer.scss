@@ -1,0 +1,58 @@
+.footer {
+    background-color: #323232;
+    padding: 1rem 1rem;
+
+    display: flex;
+    flex-direction: column;
+
+    &__header, &__subheader, &__body-text{
+        color: #FFFFFF;
+    }
+
+    &__socials {
+        display: flex;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+
+    &__social {
+        margin-right: 2rem;
+    }
+
+    &__contacts {
+        padding-bottom: 2rem;
+    }
+
+    &__contact {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+
+    &__subheader-container {
+        padding-bottom: 0.5rem;
+    }
+
+    &__address-container {
+        padding-bottom: 0.5rem;
+        padding-top: 0.5rem;
+    }
+
+    &__email {
+        padding-bottom: 0.5rem;
+        padding-top: 0.5rem;
+    }
+
+    &__logo {
+        color: #FFFFFF;
+        font-weight: 400;
+        font-size: 1.5rem;
+        padding-bottom: 0.5rem;
+        padding-top: 0.5rem;
+    }
+
+    &__copyright {
+        color: #FFFFFF;
+        font-weight: 400;
+        font-size: 0.7rem;
+    }
+}
