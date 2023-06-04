@@ -1,6 +1,6 @@
 .footer {
     background-color: #323232;
-    padding: 1rem 1rem;
+    padding: 0 5vw;
 
     display: flex;
     flex-direction: column;
@@ -20,7 +20,7 @@
     }
 
     &__contacts {
-        padding-bottom: 2rem;
+        padding-bottom: 0.5rem;
     }
 
     &__contact {
@@ -32,6 +32,10 @@
         padding-bottom: 0.5rem;
     }
 
+    &__subheader {
+        font-size: 0.875rem;
+    }
+
     &__address-container {
         padding-bottom: 0.5rem;
         padding-top: 0.5rem;
@@ -39,7 +43,7 @@
 
     &__email {
         padding-bottom: 0.5rem;
-        padding-top: 0.5rem;
+        padding-top: 0.5rem
     }
 
     &__logo {
@@ -54,5 +58,73 @@
         color: #FFFFFF;
         font-weight: 400;
         font-size: 0.7rem;
+        margin-bottom: 1rem;
+    }
+
+    @media (min-width: 768px) {
+        position: relative;
+        padding-left: 5vw;
+
+        &__header {
+        }
+
+        &__socials {
+            position: absolute;
+            top: 2.7rem;
+            left: 36.5vw;
+        }
+
+        &__social {
+            width: 2.25rem;
+            height: 2.25rem;
+        }
+
+        &__contacts {
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            padding-bottom: 3vh;
+        }
+
+        &__contact {
+            margin-right: 5vw;
+        }
+
+        &__subheader {
+            font-size: 0.875rem;
+        }
+
+        &__logo {
+            position: absolute;
+            top: 2.7rem;
+            right: 5vw;
+        }
+
+        &__copyright {
+            font-size: 0.875rem;
+            margin-bottom: 5vw;
+        }
+    }
+
+    @media (min-width: 1280px) {
+        padding-left: 10vw;
+        padding-right: 10vw;
+
+        &__contacts {
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            padding-bottom: 5vh;
+        }
+
+        &__contact {
+            margin-right: 5vw;
+        }
+
+        &__logo {
+            position: absolute;
+            top: 2.7rem;
+            right: 10vw;
+        }
     }
 }
