@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/bio.css">
+    <script src="./scripts/index-page.js" defer></script>
     <title>BandSite | Biography</title>
 </head>
 <body>
@@ -12,8 +13,8 @@
         <nav class="navigation">
             <a href="./index.html"><h1 class="navigation__logo">BANDSITE</h1></a>
             <ul class="navigation__links">
-                <li class="navigation__link-container navigation__link-container--active"><a href="" class="navigation__link navigation__link--active">Biography</a></li>
-                <li class="navigation__link-container"><a href="" class="navigation__link">Shows</a></li>
+                <li class="navigation__link-container navigation__link-container--active"><a href="./index.html" class="navigation__link navigation__link--active">Biography</a></li>
+                <li class="navigation__link-container"><a href="./pages/shows.html" class="navigation__link">Shows</a></li>
             </ul>
         </nav>
     </header>
@@ -49,6 +50,23 @@
             <img class="gallery__image" src="./assets/images/Photo-gallery-8.jpg">
             <img class="gallery__image" src="./assets/images/Photo-gallery-9.jpg">
         </section>
+    </section>
+
+    <section class="comments">
+        <h2 class="section__header comments__header">Join The Conversation</h2>
+
+        <div class="comments__add-comment">
+            <div class="comments__pic"></div>
+            <form class="comments__comment-box-container">
+                <label class="comments__input">NAME<input type="text" name="name"></label>
+                <label class="comments__input">COMMENT<input type="text" name="comment"></label>
+                <button type="submit" class="button comments__button">COMMENT</button>
+            </form>
+        </div>
+
+        <div class="comments__comments-list">
+
+        </div>
     </section>
 
     <footer class="footer">

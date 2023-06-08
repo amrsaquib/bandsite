@@ -1,0 +1,59 @@
+@use './partials/global';
+@use './partials/nav';
+@use './partials/_footer';
+
+.hero-shows {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(0deg, rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url('../assets/images/hero-shows.jpg');
+    background-position: center;
+    background-size: cover;
+    padding: 0 5vw;
+    height: 80vw;
+
+    &__header {
+        color: #FFFFFF;
+        padding-bottom: 1rem;
+        width: 45vw;
+        padding-bottom: 1rem;
+    } 
+    &__subheader {
+        color: #FFFFFF;
+        font-weight: 400;
+        padding-bottom: 0.5rem;
+    }
+}
+
+.shows-list {
+    &__header {
+        padding: 0 5vw;
+        padding-top: 1.5rem;
+    }
+    &__show {
+        border-bottom: 1px solid #E1E1E1;
+        padding-bottom: 1rem;
+        padding-top: 1.5rem;
+    }
+
+    &__section {
+        padding: 0 5vw;
+        margin-bottom: 0.5rem;
+        
+    }
+    &__label {
+        font-size: 0.625rem;
+        color: #AFAFAF;
+        font-weight: 600;
+        margin-bottom: 0.25rem;
+    }
+    &__content {
+
+    }
+
+    &__content--bolded {
+        font-weight: 600;
+    }
+
+    
+}

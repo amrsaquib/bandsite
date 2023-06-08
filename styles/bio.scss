@@ -4,4 +4,30 @@
 @use './partials/about';
 @use './partials/gallery';
 @use './partials/_footer';
-@use './partials/global'
+@use './partials/global';
+
+
+.comments {
+    &__add-comment {
+        display: flex;
+    }
+
+    &__pic {
+        background-image: url("../assets/images/Mohan-muruge.jpg");
+        background-position:left;
+        background-size: cover;
+        width: 10vw;
+        height: 10vw;
+        border-radius: 50%;
+    }
+
+    &__comment-box-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__input {
+        display: flex;
+        flex-direction: column;
+    }
+}
