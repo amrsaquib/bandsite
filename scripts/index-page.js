@@ -17,6 +17,9 @@ function addComment() {
         let date = new Date()
         newComment.date = `${date.getMonth()}/${date.getDate()}/${date.getFullYear()}`
         comments.unshift(newComment)
+
+        e.target.name.value = ""
+        e.target.comment.value = ""
         updateComments()
     })
 }
@@ -30,7 +33,11 @@ function addComment() {
     </div>
 </div>
 */
-function displayComments(n, d, c) {
+function displayComment(comment) {
+    let n = comment.name
+    let d = comment.date
+    let c = comment.comment
+
     let commentSection = document.querySelector(".comments__comments-list")
 
     let newComment = document.createElement('div')
@@ -45,8 +52,10 @@ function displayComments(n, d, c) {
     let topHalf = document.createElement('div')
     topHalf.classList.add("comments__top")
     let name = document.createElement('p')
+    name.classList.add("comments__name")
     name.innerHTML = n
     let date = document.createElement('p')
+    date.classList.add("comments__date")
     date.innerHTML = d
     topHalf.appendChild(name)
     topHalf.appendChild(date)
@@ -69,7 +78,7 @@ function updateComments() {
     let commentSection = document.querySelector(".comments__comments-list")
     commentSection.innerHTML = ""
     for(let comment of comments) {
-        displayComments(comment.name, comment.date, comment.comment)
+        displayComment(comment)
     }
 }
 

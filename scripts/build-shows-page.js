@@ -24,7 +24,7 @@ const shows = [{date: "Mon Sept 06 2021", venue: "Ronald Lane", location: "San F
 {date: "Fri Nov 26 2021", venue: "Moscow Center", location: "San Franciso, CA"},
 {date: "Wed Dec 15 2021", venue: "Press Club", location: "San Franciso, CA"}]
 
-let showsList = document.querySelector('.shows-list')
+let showsList = document.querySelector('.shows-list__list')
 
 function buildShows() {
     for(let show of shows) {
@@ -79,7 +79,24 @@ function buildShow(date, venue, location) {
     button.innerHTML = "BUY TICKETS"
     newShow.appendChild(button)
 
+
     return newShow
 }
 
+let lastClicked = undefined
+
+function showClicked() {
+
+    let show = document.querySelector(".shows-list__list")
+    show.addEventListener("click", (e) => {
+        if(lastClicked !== undefined) {
+            lastClicked.classList.remove("shows-list__show--clicked")
+        }
+        lastClicked = e.target.closest(".shows-list__show")
+        lastClicked.classList.add("shows-list__show--clicked")
+        
+    })
+}
+
 buildShows()
+showClicked()

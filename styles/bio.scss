@@ -8,17 +8,20 @@
 
 
 .comments {
+    padding: 0 5vw;
     &__add-comment {
         display: flex;
+        justify-content: space-between;
     }
 
     &__pic {
         background-image: url("../assets/images/Mohan-muruge.jpg");
         background-position:left;
         background-size: cover;
-        width: 10vw;
-        height: 10vw;
+        width: 2.5rem;
+        height: 2.5rem;
         border-radius: 50%;
+        margin: 1rem 0;
     }
 
     &__comment-box-container {
@@ -26,8 +29,143 @@
         flex-direction: column;
     }
 
-    &__input {
+    &__input-label {
         display: flex;
         flex-direction: column;
+        color: #AFAFAF;
+        font-size: 0.625rem;
+        font-weight: 600;
+        padding-bottom: 4px;
+        margin: 0.5rem 0;
+    }
+
+    &__input {
+        width:72.5vw;
+        padding: 0.25rem;
+        display: flex;
+        border: 1px solid #E1E1E1;
+        border-radius: 4px;
+        background-color: #FAFAFA;
+    }
+
+    &__input--comment {
+        padding-bottom: 5rem;
+    }
+
+    ::placeholder {
+        color: #000000;
+    }
+
+    &__button {
+        padding: 0.75rem 0;
+        margin: 0.5rem 0;
+    }
+
+    &__comments-list {
+        border-bottom: 1px solid #AFAFAF;
+        margin: 1rem 0;
+    }
+
+    &__comment {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.75rem 0;
+        border-top: 1px solid #AFAFAF;
+    }
+
+    &__circle {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        background-color: #E1E1E1;
+    }
+
+    &__main {
+        width: 75vw;
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.5rem;
+    }
+
+    &__name {
+        font-weight: 600;
+    }
+
+    &__date {
+        color: #AFAFAF;
+    }
+
+    @media (min-width: 768px) {
+
+        &__input-label {
+            font-size: 0.75rem;
+        }
+        &__button {
+            width: 20vw;
+            align-self: flex-end;
+            margin-bottom: 2rem;
+        }
+
+        &__add-comment {
+            margin: 0 5vw;
+        }
+
+        &__comments-list {
+            margin: 0 5vw;
+            margin-bottom: 2rem;
+        }
+
+        &__comment {
+            padding: 2rem 0;
+        }
+
+        &__pic {
+            width: 3.5rem;
+            height: 3.5rem;
+        }
+
+        &__circle {
+            width: 3.5rem;
+            height: 3.5rem;
+        }
+
+        &__input {
+            width: 68vw;
+            padding: 1rem;
+        }
+
+        
+
+        &__main {
+            width: 72vw;
+        }
+    }
+
+    @media (min-width: 1280px) {
+        &__add-comment {
+            margin: 0 25vw;
+        }
+
+        &__comments-list {
+            margin: 0 25vw;
+            margin-bottom: 2rem;
+        }
+
+        &__main {
+            width: 35vw;
+        }
+
+        &__input {
+            width: 32vw;
+            padding: 1rem;
+        }
+
+        &__button {
+            width: 10vw;
+        }
+
     }
 }

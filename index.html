@@ -11,7 +11,7 @@
 <body>
     <header>
         <nav class="navigation">
-            <a href="./index.html"><h1 class="navigation__logo">BANDSITE</h1></a>
+            <a href="./index.html"><img class="navigation__logo" src="./assets/logos/Logo-bandsite.svg"></a>
             <ul class="navigation__links">
                 <li class="navigation__link-container navigation__link-container--active"><a href="./index.html" class="navigation__link navigation__link--active">Biography</a></li>
                 <li class="navigation__link-container"><a href="./pages/shows.html" class="navigation__link">Shows</a></li>
@@ -58,8 +58,8 @@
         <div class="comments__add-comment">
             <div class="comments__pic"></div>
             <form class="comments__comment-box-container">
-                <label class="comments__input">NAME<input type="text" name="name"></label>
-                <label class="comments__input">COMMENT<input type="text" name="comment"></label>
+                <label class="comments__input-label">NAME<input class="comments__input" type="text" name="name" placeholder="Enter your name"></label>
+                <label class="comments__input-label">COMMENT<textarea class="comments__input comments__input--comment" name="comment" placeholder="Add a new comment"></textarea></label>
                 <button type="submit" class="button comments__button">COMMENT</button>
             </form>
         </div>
@@ -111,7 +111,7 @@
                 <p class="body-text footer__body-text footer__email">cwhyte@archentertainment.com</p>
             </section>
         </section>
-        <a href="./index.html"><h1 class="footer__logo">BANDSITE</h1></a>
+        <a href="./index.html"><img class="footer__logo" src="./assets/logos/Logo-bandsite.svg"></a>
         <p class="footer__copyright">Copyright The Bees Knees © 2021 All Rights Reserved</p>
     </footer>
 

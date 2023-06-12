@@ -10,22 +10,44 @@
     background-position: center;
     background-size: cover;
     padding: 0 5vw;
-    height: 80vw;
+    //height: 80vw;
 
     &__header {
         color: #FFFFFF;
-        padding-bottom: 1rem;
-        width: 45vw;
-        padding-bottom: 1rem;
+        padding-top: 2.5vw;
+        width: 60vw;
+        padding-bottom: 5vw;
     } 
     &__subheader {
         color: #FFFFFF;
         font-weight: 400;
         padding-bottom: 0.5rem;
+        padding-top: 10vw;
     }
+
+    &__song {
+        height: 7.5rem;
+        margin-bottom: 2rem;
+    }
+
+    @media (min-width: 768px) {
+        &__song {
+            width: 50vw;
+        }
+    }
+
+    @media (min-width: 1280px) { 
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 80vh;
+        padding: 0 10vw;
+    }
+    
 }
 
 .shows-list {
+    padding-bottom: 1rem;
     &__header {
         padding: 0 5vw;
         padding-top: 1.5rem;
@@ -35,6 +57,25 @@
         padding-bottom: 1rem;
         padding-top: 1.5rem;
     }
+
+    &__show:hover {
+        background-color: #FAFAFA;
+    }
+
+    &__show:active {
+        background-color: #E1E1E1;
+       }
+
+   &__show--clicked {
+    background-color: #E1E1E1;
+   }
+
+   &__show--clicked:hover {
+    background-color: #E1E1E1;
+   }
+
+
+
 
     &__section {
         padding: 0 5vw;
@@ -55,5 +96,32 @@
         font-weight: 600;
     }
 
+    &__button {
+        padding: 0.75rem;
+        margin: 0.5rem 5vw;
+        width: 90vw;
+    }
+
+    @media (min-width: 768px) {
+        &__show {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__section {
+        }
+
+        &__button {
+            width: 15vw;
+        }
+    }
+
+    @media (min-width: 1280px) { 
+        display: flex;
+        padding: 0 5vw;
+       
+        &__section {
+        }
+    }
     
 }
