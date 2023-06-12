@@ -108,6 +108,14 @@
             justify-content: space-between;
         }
 
+        &__label {
+            display: none;
+        }
+
+        &__label--first {
+            display: inline
+        }
+
         &__section {
         }
 

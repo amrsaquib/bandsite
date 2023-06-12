@@ -17,29 +17,39 @@
             </div>
 */
 
-const shows = [{date: "Mon Sept 06 2021", venue: "Ronald Lane", location: "San Franciso, CA"},
-{date: "Tue Sept 21 2021", venue: "Pier 3 East", location: "San Franciso, CA"}, 
-{date: "Fri Oct 15 2021", venue: "View Lounge", location: "San Franciso, CA"},
-{date: "Sat Nov 06 2021", venue: "Hyatt Agency", location: "San Franciso, CA"},
-{date: "Fri Nov 26 2021", venue: "Moscow Center", location: "San Franciso, CA"},
-{date: "Wed Dec 15 2021", venue: "Press Club", location: "San Franciso, CA"}]
+const apiKey = "3999575c-a45f-4a17-99d2-bea70a37e6fa"
 
 let showsList = document.querySelector('.shows-list__list')
 
+let firstShow = true
+
 function buildShows() {
-    for(let show of shows) {
-        showsList.appendChild(buildShow(show.date, show.venue, show.location))
-    }
+    axios.get(`https://project-1-api.herokuapp.com/showdates?api_key=${apiKey}`)
+    .then(r => {
+        let shows = []
+        shows = r.data
+        firstShow = true
+        for(let show of shows) {
+            let newDate = new Date(show.date).toDateString()
+            showsList.appendChild(buildShow(newDate, show.place, show.location))
+        }
+    }).catch(e => {
+        console.log(e)
+    })
 }
 
 function buildShow(date, venue, location) {
     let newShow = document.createElement('div')
     newShow.classList.add("shows-list__show")
+    
 
     let showSectionHolder = document.createElement('div')
     showSectionHolder.classList.add("shows-list__section")
     let label = document.createElement('p');
     label.classList.add("shows-list__label")
+    if(firstShow) {
+        label.classList.add("shows-list__label--first")
+    }
     label.innerHTML = "DATE"
     let content = document.createElement('p')
     content.classList.add("shows-list__content")
@@ -53,6 +63,9 @@ function buildShow(date, venue, location) {
     showSectionHolder.classList.add("shows-list__section")
     label = document.createElement('p');
     label.classList.add("shows-list__label")
+    if(firstShow) {
+        label.classList.add("shows-list__label--first")
+    }
     label.innerHTML = "VENUE"
     content = document.createElement('p')
     content.classList.add("shows-list__content")
@@ -65,6 +78,10 @@ function buildShow(date, venue, location) {
     showSectionHolder.classList.add("shows-list__section")
     label = document.createElement('p');
     label.classList.add("shows-list__label")
+    if(firstShow) {
+        label.classList.add("shows-list__label--first")
+        firstShow = false
+    }
     label.innerHTML = "LOCATION"
     content = document.createElement('p')
     content.classList.add("shows-list__content")
