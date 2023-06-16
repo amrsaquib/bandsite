@@ -39,18 +39,36 @@
     @media (min-width: 1280px) { 
         display: flex;
         flex-direction: row;
-        align-items: center;
-        height: 80vh;
+        align-items: baseline;
+        justify-content: space-between;
+        height: 35rem;
         padding: 0 10vw;
+
+        &__header {
+            width: 40vw;
+        }
+
+        &__subheader {
+            width:40vw;
+        }
+
+        &__song {
+            width: 30vw;
+            align-self: center;
+        }
     }
     
 }
 
 .shows-list {
     padding-bottom: 1rem;
+    padding: 0 5vw;
     &__header {
-        padding: 0 5vw;
         padding-top: 1.5rem;
+    }
+
+    &__top-labels-container {
+        display: none;
     }
     &__show {
         border-bottom: 1px solid #E1E1E1;
@@ -64,7 +82,7 @@
 
     &__show:active {
         background-color: #E1E1E1;
-       }
+    }
 
    &__show--clicked {
     background-color: #E1E1E1;
@@ -74,11 +92,8 @@
     background-color: #E1E1E1;
    }
 
-
-
-
     &__section {
-        padding: 0 5vw;
+        //padding: 0 5vw;
         margin-bottom: 0.5rem;
         
     }
@@ -98,7 +113,7 @@
 
     &__button {
         padding: 0.75rem;
-        margin: 0.5rem 5vw;
+        margin: 0.5rem 0;
         width: 90vw;
     }
 
@@ -112,24 +127,56 @@
             display: none;
         }
 
-        &__label--first {
-            display: inline
+        &__top-labels-container {
+            display: flex;
+            width: 100%;
+        }
+
+        &__top-label-container {
+            width: 25%;
+        }
+
+        &__top-label {
+            display: inline;
+            font-size: 0.75rem;
+        }
+
+        &__list {
+            padding-bottom: 2rem;
         }
 
         &__section {
+            display: flex;
+            align-items: center;;
+            width: 25%;
+            padding: 0;
         }
 
         &__button {
+            align-self: flex-end;
+            margin: 0;
+            height: 2.5rem;
             width: 15vw;
         }
     }
 
     @media (min-width: 1280px) { 
         display: flex;
-        padding: 0 5vw;
-       
-        &__section {
+        padding: 0 10vw;
+
+        justify-content: space-between;
+
+        &__header {
         }
+
+        &__top-labels-container {
+            padding-top: 3rem;
+        }
+
+        &__list {
+            width: 60vw;
+        }
+        
     }
     
 }

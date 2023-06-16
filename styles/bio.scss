@@ -1,17 +1,177 @@
 @use './partials/fonts';
 @use './partials/nav';
-@use './partials/hero-home';
-@use './partials/about';
-@use './partials/gallery';
 @use './partials/_footer';
 @use './partials/global';
 
+.hero-home {
+    display: flex;
+    align-items: center;
+    background:linear-gradient(0deg, rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url('../../assets/images/hero-bio.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 20rem;
+    padding: 0 5vw;
+
+    &__header {
+        color: #FFFFFF;
+    }
+
+    @media (min-width: 768px) {
+        height: 30rem;
+        padding: 0 5vw;
+    }
+
+    @media (min-width: 1280px) {
+        height: 40rem;
+        padding-left: 10vw;
+    }
+}
+
+.about {
+    padding: 0 5vw;
+
+    &__image-container {
+        margin-bottom: 5vw;
+    }
+    &__image {
+        width: 100%;
+        height: 50vw;
+    }
+    &__image-caption {
+        font-size: 0.875rem;
+        font-weight: 600;
+        line-height: 1.5rem;
+    }
+
+    &__subheader {
+        margin-bottom: 1rem;
+    }
+
+    &__body-text {
+        margin-bottom: 1rem;
+    }
+
+    @media (min-width: 768px) {
+        padding: 0rem 5vw;
+        padding-bottom: 1rem;
+
+        &__image-container {
+            margin-left: 5vw;
+            margin-right: 5vw;
+
+        }
+        &__image {
+            width: 100%;
+            height: 40vw;
+            margin-bottom: 1rem;
+        }
+        &__image-caption {
+            font-size: 1.5rem;
+            font-weight: 600;
+            line-height: 2.3rem;
+            margin-top: 1rem;
+        }
+        &__image-caption--name {
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+
+        &__subheader {
+            margin-left: 5vw;
+        }
+
+        &__body {
+            margin: 0rem 5vw;
+            display: flex;
+
+        }
+
+        &__body-text {
+            margin-right: 1rem;
+            line-height: 1.7rem;
+        }
+    }
+
+    @media (min-width: 1280px) {
+        padding-left: 10vw;
+
+        &__image-container {
+            margin-left: 6vw;
+            margin-right: 6vw;
+        }
+
+        &__subheader {
+            margin-left: 6vw;
+        }
+
+        &__body {
+            margin-left: 6vw;
+            margin-right: 6vw;
+        }
+
+    }
+
+
+}
+
+.gallery {
+    background-color: #FAFAFA;
+    padding: 0 5vw;
+
+    &__images {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__image {
+        margin-bottom: 5vw;
+        width: 90vw;
+        height: 50vw;
+    }
+
+    @media (min-width: 768px) {
+        padding-bottom: 2vh;
+        &__images {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        &__image {
+            width: 29vw;
+            height: 15vw;
+            margin-bottom: 1.5vw;
+            filter: grayscale(100%);
+        }
+
+        &__image:hover {
+            filter: grayscale(0%);
+        }
+    }
+
+    @media (min-width: 1280px) {
+        padding-left: 10vw;
+        padding-right: 10vw;
+        &__images {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        &__image {
+            width: 26vw;
+            height: 14vw;
+            margin-bottom: 1vw;
+        }
+    }
+}
 
 .comments {
     padding: 0 5vw;
     &__add-comment {
         display: flex;
-        justify-content: space-between;
     }
 
     &__pic {
@@ -22,11 +182,13 @@
         height: 2.5rem;
         border-radius: 50%;
         margin: 1rem 0;
+        margin-right: 1rem;
     }
 
     &__comment-box-container {
         display: flex;
         flex-direction: column;
+        width: 100%;
     }
 
     &__input-label {
@@ -35,29 +197,37 @@
         color: #AFAFAF;
         font-size: 0.625rem;
         font-weight: 600;
-        padding-bottom: 4px;
         margin: 0.5rem 0;
     }
 
     &__input {
-        width:72.5vw;
-        padding: 0.25rem;
+        margin-top: 0.25rem;
+        padding: 0.5rem;
         display: flex;
         border: 1px solid #E1E1E1;
         border-radius: 4px;
         background-color: #FAFAFA;
     }
 
-    &__input--comment {
-        padding-bottom: 5rem;
+    &__input:focus {
+        outline-color: #323232;
     }
+
+    &__input--error {
+        border: 1px solid #D22D2D;
+    }
+
+    &__input--comment {
+        padding-bottom: 3rem;
+    }
+
 
     ::placeholder {
         color: #000000;
     }
 
     &__button {
-        padding: 0.75rem 0;
+        padding: 0.5rem 0;
         margin: 0.5rem 0;
     }
 
@@ -68,7 +238,6 @@
 
     &__comment {
         display: flex;
-        justify-content: space-between;
         padding: 0.75rem 0;
         border-top: 1px solid #AFAFAF;
     }
@@ -78,10 +247,15 @@
         height: 2.5rem;
         border-radius: 50%;
         background-color: #E1E1E1;
+        margin-right: 1rem;
     }
 
     &__main {
-        width: 75vw;
+        width: 90%;
+    }
+
+    &__content {
+        word-wrap: break-word;
     }
 
     &__top {
@@ -99,73 +273,51 @@
     }
 
     @media (min-width: 768px) {
+        margin: 0 5vw;
 
-        &__input-label {
-            font-size: 0.75rem;
-        }
-        &__button {
-            width: 20vw;
-            align-self: flex-end;
-            margin-bottom: 2rem;
+        &__header {
+            margin: 0 -5vw;
         }
 
-        &__add-comment {
-            margin: 0 5vw;
+        &__pic {
+            width: 3rem;
+            height: 3rem;
         }
 
         &__comments-list {
-            margin: 0 5vw;
-            margin-bottom: 2rem;
+            margin-top: 1rem;
+            margin-bottom: 3rem;
         }
 
         &__comment {
             padding: 2rem 0;
         }
 
-        &__pic {
-            width: 3.5rem;
-            height: 3.5rem;
+        &__content {
+            line-height: 1.7rem;
         }
 
         &__circle {
-            width: 3.5rem;
-            height: 3.5rem;
+            width: 3rem;
+            height: 3rem;
         }
 
-        &__input {
-            width: 68vw;
-            padding: 1rem;
-        }
-
-        
-
-        &__main {
-            width: 72vw;
+        &__button {
+            width: 20vw;
+            align-self: flex-end;
         }
     }
 
     @media (min-width: 1280px) {
-        &__add-comment {
-            margin: 0 25vw;
-        }
+        margin: 0 27vw;
 
-        &__comments-list {
-            margin: 0 25vw;
-            margin-bottom: 2rem;
-        }
-
-        &__main {
-            width: 35vw;
-        }
-
-        &__input {
-            width: 32vw;
-            padding: 1rem;
+        &__header {
+            margin: 0 -23vw;
         }
 
         &__button {
-            width: 10vw;
+            width:10vw;
+            padding: 0.75rem 0;
         }
-
     }
 }

@@ -5,8 +5,10 @@
     align-items: center;
 
     &__logo {
-        padding-bottom: 1.5vw;
-        padding-top: 1.5vw;
+        padding-top: 1rem;
+        padding-bottom: 0.25rem;
+        height: 20px;
+        width: 120px;
     }
 
     &__links {
@@ -22,6 +24,10 @@
         padding-bottom: 1.5vw;
     }
 
+    &__link-container:hover {
+        border-bottom: 0.2rem solid #FFFFFF;
+    }
+
     &__link-container--active {
         border-bottom: 0.2rem solid #FFFFFF;
     }
@@ -32,6 +38,7 @@
         text-decoration: none;
         color: #AFAFAF;
     }
+
 
     &__link--active {
         font-weight: 600;

@@ -11,8 +11,15 @@ function addComment() {
         e.preventDefault()
 
         if(e.target.name.value.trim() === "" || e.target.comment.value.trim === "") {
+            e.target.name.classList.add("comments__input--error")
+            e.target.comment.classList.add("comments__input--error")
             return
         } else {
+
+            if(e.target.name.classList.contains("comments__input--error") && e.target.name.classList.contains("comments__input--error") ) {
+                e.target.name.classList.remove("comments__input--error")
+            e.target.comment.classList.remove("comments__input--error")
+            }
 
             axios.post(`https://project-1-api.herokuapp.com/comments?api_key=${apiKey}`, {
                 name: e.target.name.value,

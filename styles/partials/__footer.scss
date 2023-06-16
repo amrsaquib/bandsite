@@ -34,6 +34,7 @@
 
     &__subheader {
         font-size: 0.875rem;
+        font-weight: 600;
     }
 
     &__address-container {
@@ -51,13 +52,13 @@
         font-weight: 400;
         font-size: 1.5rem;
         padding-bottom: 0.5rem;
-        padding-top: 0.5rem;
+        padding-top: 2rem;
     }
 
     &__copyright {
         color: #FFFFFF;
         font-weight: 400;
-        font-size: 0.7rem;
+        font-size: 0.6rem;
         margin-bottom: 1rem;
     }
 
@@ -98,6 +99,7 @@
             position: absolute;
             top: 2.7rem;
             right: 5vw;
+            padding-top: 1rem;
         }
 
         &__copyright {
