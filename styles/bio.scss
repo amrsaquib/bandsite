@@ -24,6 +24,10 @@
     @media (min-width: 1280px) {
         height: 40rem;
         padding-left: 10vw;
+
+        &__header {
+            display: inline-block;
+        }
     }
 }
 

@@ -276,6 +276,9 @@ button {
     height: 40rem;
     padding-left: 10vw;
   }
+  .hero-home__header {
+    display: inline-block;
+  }
 }
 
 .about {
